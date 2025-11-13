@@ -57,27 +57,27 @@ gleam test  # Run the tests
 Adicione a dependência ao seu projeto:
 
 ```sh
-gleam add gmsal
+gleam add gbr_msal
 ```
 
 Faça seu primeiro login na microsoft usando o Gleam ⭐
 
 ```gleam
-import gmsal
+import gbr/msal
 
 pub fn main() {
   let cfg =
-    gmsal.cfg("client_id")
-    |> gmsal.cfg_add_auth("authority", "https://login.microsoftonline/common")
-    |> gmsal.cfg_add_cache("cacheLocation", "localStorage")
+    msal.cfg("client_id")
+    |> msal.cfg_add_auth("authority", "https://login.microsoftonline/common")
+    |> msal.cfg_add_cache("cacheLocation", "localStorage")
 
-  use msal <- promise.try_await(gmsal.new(cfg))
-  use response <- promise.map_try(gmsal.login(msal, gmsal.popup, None))
+  use msal <- promise.try_await(msal.new(cfg))
+  use response <- promise.map_try(msal.login(msal, msal.popup, None))
 
-  gmsal.res_get(response, "idToken") |> echo
-  gmsal.res_get(response, "accessToken") |> echo
-  gmsal.res_parent_get(response, "account", "username") |> echo
-  gmsal.res_parent_get(response, "account", "name") |> echo
+  msal.res_get(response, "idToken") |> echo
+  msal.res_get(response, "accessToken") |> echo
+  msal.res_parent_get(response, "account", "username") |> echo
+  msal.res_parent_get(response, "account", "name") |> echo
 }
 ```
 
@@ -85,23 +85,23 @@ Ou, consulte dados da conta de usuário ativa no cache msal-browser:
 
 ```gleam
 
-import gmsal
-import gmsal/account.{account_active}
+import gbr/msal
+import gbr/msal/account.{account_active}
 
 pub fn main() {
   let cfg =
-    gmsal.cfg("client_id")
-    |> gmsal.cfg_add_auth("authority", "https://login.microsoftonline/common")
-    |> gmsal.cfg_add_cache("cacheLocation", "localStorage")
+    msal.cfg("client_id")
+    |> msal.cfg_add_auth("authority", "https://login.microsoftonline/common")
+    |> msal.cfg_add_cache("cacheLocation", "localStorage")
 
-  use msal <- promise.map_try(gmsal.new(cfg))
+  use msal <- promise.map_try(msal.new(cfg))
   use account_active <- result.try(account_active(msal))
 
   echo account_active
 }
 ```
 
-> Mais sobre e documentação pode ser encontrada aqui <https://hexdocs.pm/gmsal>.
+> Mais sobre e documentação pode ser encontrada aqui <https://hexdocs.pm/gbr_msal>.
 
 ## 🧪 Contribuindo
 
