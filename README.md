@@ -113,6 +113,8 @@ pub fn main() {
   - [ ] contributing.md
 - [ ] Unit tests
 - [ ] More docs
-- [ ] GH workflow
-  - [ ] test & build
-  - [ ] changelog & publish
+- [x] GH workflow
+  - [x] test & build
+  - [x] changelog & issue to doc
+  - [x] ~~auto publish~~ manual publish
+    - [x] `gleam publish`
