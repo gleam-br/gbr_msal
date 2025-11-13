@@ -1,6 +1,6 @@
 /**
  * @packageDocumentation
- * @module gmsal
+ * @module gbr_msal
  */
 
 ////
@@ -113,7 +113,7 @@ export function getParentKey(result, parent, key) {
 /// Função de log p/ imprimir mensagem no web console.
 ///
 function log(msg) {
-  console.log("LOG:gmsal:", msg)
+  console.log("LOG:gbr_msal:", msg)
 }
 
 async function execApp(cb, info) {

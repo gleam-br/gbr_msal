@@ -6,7 +6,7 @@
 
 import gleam/javascript/promise
 
-/// Concentra a composição necessária p/ exec. das funções em 'gmsal'.
+/// Concentra a composição necessária p/ exec. das funções em 'gbr_msal'.
 ///
 /// - `config`: Config da inicialização do msal.
 /// - `instance`: Instância do msal criada.
