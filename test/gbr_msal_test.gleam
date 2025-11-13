@@ -5,9 +5,9 @@ pub fn main() -> Nil {
 }
 
 // gleeunit test functions end in `_test`
-pub fn hello_world_test() {
-  let name = "Joe"
+pub fn gbr_msal_todo_test() {
+  let name = "Gleam BR MSAL"
   let greeting = "Hello, " <> name <> "!"
 
-  assert greeting == "Hello, Joe!"
+  assert greeting == "Hello, Gleam BR MSAL!"
 }
