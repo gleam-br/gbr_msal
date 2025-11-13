@@ -17,8 +17,6 @@ Mais sobre [MS OAuth2](https://docs.microsoft.com/azure/active-directory/develop
 gleam add gbr_msal@1
 ```
 
-Further documentation can be found at <https://hexdocs.pm/gbr_msal>.
-
 ## Development
 
 ```sh
