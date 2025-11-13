@@ -108,6 +108,9 @@ pub fn main() {
 
 ## 🌄 Roadmap
 
+- [ ] Fix hex doc links 
+  - [ ] code_of_conduct.md
+  - [ ] contributing.md
 - [ ] Unit tests
 - [ ] More docs
 - [ ] GH workflow
